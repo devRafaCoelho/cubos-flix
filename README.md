@@ -1,8 +1,11 @@
 # cubos-flix
 
 This repository is a movie page.
-The information of the movies listed comes from the API (https://www.themoviedb.org/documentation/api)
+
+The information of the movies listed comes from the API (https://www.themoviedb.org/documentation/api).
+
 On the home page are the most commented on social networks.
+
 The highlight of the day is updated according to the popularity of the movie.
 
 > :construction: Project under construction :construction:

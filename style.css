@@ -106,6 +106,13 @@ body {
     box-shadow: var(--shadow-color);
 
     cursor: pointer;
+    transition-duration: .3s;
+}
+
+.movie:hover {
+    transform-origin: center;
+    transform: scale(110%);
+    transition-duration: .3s;
 }
 
 .movie__info {
@@ -134,12 +141,13 @@ body {
     color: #fdfdfd;
 }
 
-.movie__rating {
+.movie__info__container {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     gap: 4px;
+}
 
+.movie__rating {
     font-family: "Manrope", sans-serif;
     font-style: normal;
     font-weight: bold;

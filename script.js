@@ -84,6 +84,9 @@ function createMovieCard() {
         movieRating.classList.add("movie__rating");
         movieRating.textContent = element.average;
 
+        const movieInfoContainer = document.createElement("div");
+        movieInfoContainer.classList.add("movie__info__container");
+
         const movieInfo = document.createElement("div");
         movieInfo.classList.add("movie__info");
 
@@ -103,8 +106,8 @@ function createMovieCard() {
             body.style.overflowY = 'scroll';
         });
 
-        movieRating.append(image);
-        movieInfo.append(movieTitle, movieRating);
+        movieInfoContainer.append(image, movieRating);
+        movieInfo.append(movieTitle, movieInfoContainer);
         movie.append(movieInfo);
         movies.append(movie);
     });

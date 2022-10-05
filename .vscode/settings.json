@@ -1,0 +1,15 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "svg.preview.mode": "svg",
+    "liveServer.settings.donotVerifyTags": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontLigatures": true,
+    "prettier.tabWidth": 4,
+    "window.zoomLevel": 1,    
+    "editor.formatOnSave": true
+}

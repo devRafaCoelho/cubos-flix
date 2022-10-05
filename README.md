@@ -9,8 +9,8 @@ The highlight of the day is updated according to the popularity of the movie.
 
 #Screenshots
 
-![](main-page.jpeg);
-![](highlight.jpeg);
-![](modal.jpeg);
-![](modal2.jpeg);
-![](main-page-light.jpeg);
+![img](main-page.jpeg);
+![img](highlight.jpeg);
+![img](modal.jpeg);
+![img](modal2.jpeg);
+![img](main-page-light.jpeg);

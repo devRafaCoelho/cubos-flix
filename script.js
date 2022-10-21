@@ -22,7 +22,6 @@ let allMovies = [];
 let sectionMovies = [];
 let sectionIndex = 0;
 
-// Grid Movies
 async function listMovies() {
     try {
         const data = await (await fetch("https://tmdb-proxy.cubos-academy.workers.dev/3/trending/movie/day?language=pt-BR&include_adult=false")).json();
@@ -53,6 +52,14 @@ function createDataArray(link) {
     });
 
     allMovies.sort((a, b) => { return b.popularity - a.popularity });
+
+    if (allMovies.length < 6) {
+        next.style.display = 'none';
+        prev.style.display = 'none';
+    } else {
+        next.style.display = 'flex';
+        prev.style.display = 'flex';
+    }
 }
 
 function arrangeSections() {
@@ -61,12 +68,12 @@ function arrangeSections() {
 
     while (movieIndex < allMovies.length) {
         while (section.length < 5) {
-            section.push(allMovies[movieIndex++])
+            section.push(allMovies[movieIndex++]);
         }
+
         sectionMovies.push(section);
         section = [];
     }
-
     createMovieCard();
 }
 
@@ -135,7 +142,6 @@ prev.addEventListener('click', () => {
     createMovieCard();
 });
 
-// Find Movie
 input.addEventListener("keyup", findMovie);
 
 async function findMovie() {
@@ -151,7 +157,6 @@ async function findMovie() {
     }
 }
 
-// Highlight
 (async function () {
     try {
         const body = await (await fetch("https://tmdb-proxy.cubos-academy.workers.dev/3/trending/movie/day?language=pt-BR&include_adult=false")).json();
@@ -183,7 +188,6 @@ function formatDate(date) {
     });
 }
 
-// Modal
 async function createModal(movie) {
     try {
         const data = await (await fetch(`https://tmdb-proxy.cubos-academy.workers.dev/3/movie/${movie.id}?language=pt-BR`)).json();
@@ -206,7 +210,6 @@ async function createModal(movie) {
     }
 }
 
-// Change Theme
 let initialTheme = localStorage.getItem('theme') ?? 'light';
 verifyTheme();
 
